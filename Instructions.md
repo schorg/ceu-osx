@@ -6,7 +6,7 @@ You already did the following:
 
 See: http://brew.sh
 
-## Installing lua, luarocks
+## Installing Lua 5.1
 
 Check your lua installation
 
