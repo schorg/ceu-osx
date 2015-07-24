@@ -1,4 +1,4 @@
-You already did the following:
+## Cloning this repository
 
 	git clone https://github.com/schorg/ceu-osx
 
