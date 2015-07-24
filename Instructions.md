@@ -59,7 +59,7 @@ Go back to top.
 
 Install the following SDL2 libraries:
 
-	brew install SDL2
+	brew install sdl2
 	brew install sdl2_image sdl2_mixer sdl2_ttf sdl2_net sdl2_gfx
 
 Download ceu-sdl:
