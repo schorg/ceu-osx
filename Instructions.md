@@ -39,6 +39,7 @@ Build Céu like that:
 	lua pak.lua
 
 Copy run_tests_osx.lua to the ceu directory
+
 	cp ../ceu-osx/run_tests_osx.lua .
 	chmod a+x run_tests_osx.lua
 
