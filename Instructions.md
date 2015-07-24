@@ -8,22 +8,26 @@ See: http://brew.sh
 
 ## Installing lua, luarocks
 
-brew install lua51 --with-completion
-
-luarocks-5.1 install lua-lpeg
-
 Check your lua installation
 
-brew info lua
+	brew info lua
 
 The installations of lua5.1 and lua5.2 are currently conflicting.
-If lua: stable 5.2.4 is installed, uninstall it if you do not need it.
+If lua: stable 5.2.x is installed, uninstall it if you do not need it.
 
-brew uninstall lua
+	brew uninstall lua
 
-If lua is not installed, Link lua to lua-5.1
+Install Lua 5.1
 
-ln -s /usr/local/bin/lua-5.1 /usr/local/bin/lua
+	brew install lua51 --with-completion
+
+Install the Lua LPeg library:
+
+	luarocks-5.1 install lua-lpeg
+
+Link lua to lua-5.1
+
+	ln -s /usr/local/bin/lua-5.1 /usr/local/bin/lua
 
 
 ## Building Céu
@@ -50,12 +54,12 @@ Go back to top.
 
 	cd ..
 
-## Installing SDL libraries
+## Using Céu with SDL
+
+Install the following SDL2 libraries:
 
 	brew install SDL2
 	brew install sdl2_image sdl2_mixer sdl2_ttf sdl2_net sdl2_gfx
-
-## Using Céu with SDL
 
 Download ceu-sdl:
 
