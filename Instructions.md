@@ -68,9 +68,12 @@ Download ceu-sdl:
 	cd ceu-sdl/
 
 In order to build the SDL samples substitute the Makefile.
-We use clang for compilation, CPP as the c-preprocessor for Céu.
 
 	cp ../ceu-osx/Makefile .
+
+On OS X we use clang for compilation, CPP (which seems to be a shortcut for
+clang -E) as the c-preprocessor for Céu. CPP Mac OS X seems to be more strict
+than cpp on Linux concerning the include path ("-I." instead of "-I .").
 
 Use make to build the samples, for example:
 
@@ -79,3 +82,24 @@ Use make to build the samples, for example:
 And run it:
 
 	./samples/sdl1.exe
+
+For running ceu from the command line for Céu programs with includes, call ceu
+with the suitable cpp-exe and cpp-args parameters. For example
+
+	ceu --cpp-exe="CPP" --cpp-args = "-I." <your file>.ceu
+
+## Uninstalling Céu
+
+Uninstall brew formala
+
+	brew uninstall sdl2_image sdl2_mixer sdl2_ttf sdl2_net sdl2_gfx
+	brew uninstall sdl2
+	luarocks-5.1 uninstall lua-lpeg
+	brew uninstall lua51
+
+Uninstall manually created files and links
+
+	rm /usr/local/bin/ceu
+	rm /usr/local/bin/lua
+
+Delete the cloned repositories.
