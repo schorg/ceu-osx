@@ -1,5 +1,5 @@
 # ceu-osx
-Ceu on OS X
+Céu on OS X
 
-Installation instruction for Ceu on OSX
- 
+Installation instructions for Céu on Mac OS X.
+See [instructions](Instruction.md)

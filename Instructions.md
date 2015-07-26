@@ -32,7 +32,7 @@ Link lua to lua-5.1
 
 ## Building Céu
 
-Build Céu like that:
+Clone Céu from github and build it
 
 	git clone https://github.com/fsantanna/ceu
 	cd ceu/
@@ -43,7 +43,11 @@ Copy run_tests_osx.lua to the ceu directory
 	cp ../ceu-osx/run_tests_osx.lua .
 	chmod a+x run_tests_osx.lua
 
-The Test are partially adapted to compilation with clang etc.
+Using clang for compilation is more strict on some tests cases than gcc.
+Especially, clang throws more warnings, which stop the test cases rather early when
+compiled with -Werror. Therefore compilation parameters have been adopted.
+
+Run the tests (which fails after a certain amount of test cases)
 
 	./run_tests_osx.lua
 
@@ -72,7 +76,7 @@ In order to build the SDL samples substitute the Makefile.
 	cp ../ceu-osx/Makefile .
 
 On OS X we use clang for compilation, CPP (which seems to be a shortcut for
-clang -E) as the c-preprocessor for Céu. CPP Mac OS X seems to be more strict
+clang -E) as the c-preprocessor for Céu. CPP on Mac OS X seems to be more strict
 than cpp on Linux concerning the include path ("-I." instead of "-I .").
 
 Use make to build the samples, for example:
@@ -86,11 +90,11 @@ And run it:
 For running ceu from the command line for Céu programs with includes, call ceu
 with the suitable cpp-exe and cpp-args parameters. For example
 
-	ceu --cpp-exe="CPP" --cpp-args = "-I." <your file>.ceu
+	ceu --cpp-exe "CPP" --cpp-args "-I." <your file>.ceu
 
 ## Uninstalling Céu
 
-Uninstall brew formala
+Uninstall brew formulas
 
 	brew uninstall sdl2_image sdl2_mixer sdl2_ttf sdl2_net sdl2_gfx
 	brew uninstall sdl2
